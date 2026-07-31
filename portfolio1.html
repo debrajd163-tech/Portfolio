@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debraj | Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Devicon Logos CDN (Must be present for logos to render) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body class="bg-[#272932] text-slate-100 font-sans antialiased selection:bg-teal-300 selection:text-[#272932]">
+
+    <!-- Navigation Bar (Blended with #272932) -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#272932]/85 border-b border-[#3E4150]">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center relative" aria-label="Main Navigation">
+            
+            <a href="#hero" class="text-xl font-bold tracking-tight text-teal-400 hover:text-teal-300 transition">
+                &lt;<strong class="font-bold">Debraj Das</strong>&gt;
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <li><a href="#about" class="hover:text-teal-400 transition"><strong class="font-bold">About</strong></a></li>
+                <li><a href="#skills" class="hover:text-teal-400 transition"><strong class="font-bold">Skills</strong></a></li>
+                <li><a href="#projects" class="hover:text-teal-400 transition"><strong class="font-bold">Projects</strong></a></li>
+                <li><a href="#contact" class="hover:text-teal-400 transition"><strong class="font-bold">Contact</strong></a></li>
+            </ul>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+
+            <!-- Transparent Mobile Navigation Overlay -->
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#272932]/90 backdrop-blur-lg border-b border-[#3E4150] shadow-2xl px-6 py-6 space-y-4 transition-all duration-300 ease-in-out md:hidden">
+                <a href="#about" class="block text-slate-200 hover:text-teal-400 py-2 border-b border-[#3E4150]/50"><strong class="font-bold">About</strong></a>
+                <a href="#skills" class="block text-slate-200 hover:text-teal-400 py-2 border-b border-[#3E4150]/50"><strong class="font-bold">Skills</strong></a>
+                <a href="#projects" class="block text-slate-200 hover:text-teal-400 py-2 border-b border-[#3E4150]/50"><strong class="font-bold">Projects</strong></a>
+                <a href="#contact" class="block text-slate-200 hover:text-teal-400 py-2"><strong class="font-bold">Contact</strong></a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 space-y-24 py-12">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[75vh] flex flex-col justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                
+                <!-- Text Block -->
+                <div class="order-2 md:order-1 space-y-6">
+                    <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-100 tracking-tight leading-tight">
+                        Hi, I'm <span class="text-teal-400">Debraj</span>.
+                    </h1>
+                    <p class="text-lg text-slate-300 leading-relaxed">
+                        Software engineer passionate about full-stack web architectures, algorithmic optimization, and intelligent systems.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#projects" class="px-6 py-3 bg-teal-500 text-[#272932] font-semibold rounded-lg hover:bg-teal-400 transition shadow-lg shadow-teal-500/20">
+                            View Projects
+                        </a>
+                        <a href="RESUME.pdf" target="_blank" class="px-6 py-3 bg-[#30333E] text-slate-200 font-semibold rounded-lg hover:bg-[#3E4150] border border-[#3E4150] transition">
+                            Resume <i class="fa-solid fa-arrow-down ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Animated Blended Image Container -->
+                <div class="order-1 md:order-2 relative w-full max-w-sm mx-auto md:max-w-none flex justify-center items-center">
+                    <div class="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-teal-500/40 via-cyan-500/40 to-teal-400/40 opacity-70 blur-xl animate-pulse"></div>
+                    
+                    <div class="relative rounded-2xl overflow-hidden bg-[#30333E] border border-[#3E4150] shadow-2xl transition-all duration-500 ease-out hover:-translate-y-2 hover:border-teal-500/50 hover:shadow-teal-500/10 group">
+                        <img 
+                            src="photo.png" 
+                            alt="Debraj" 
+                            class="w-full h-80 sm:h-96 md:h-[420px] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                            loading="lazy"
+                        >
+                        <!-- Bottom Gradient Blending directly into #272932 -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#272932] via-[#272932]/30 to-transparent pointer-events-none"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Section (Slightly Deeper Background Layer) -->
+<section id="about" class="bg-[#23252D]/60 p-8 sm:p-10 rounded-2xl border border-[#3E4150]/60 space-y-6 scroll-mt-20">
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-100 flex items-center gap-3">
+        <span class="text-teal-400 font-mono">01.</span> <strong class="font-bold">About Me</strong>
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        
+        <!-- Detailed Bio -->
+        <div class="md:col-span-2 text-slate-300 space-y-4 leading-relaxed">
+            <p>
+                I am a student pursuing my <strong class="font-bold text-slate-100">Bachelor of Engineering</strong> at <strong class="font-bold text-slate-100">Jadavpur University</strong>, driven by a strong passion for software architecture, computational logic, and modern web systems.
+            </p>
+            <p>
+                My technical toolkit spans core languages like <strong class="font-bold text-slate-100">C++</strong>, <strong class="font-bold text-slate-100">Python</strong>, and <strong class="font-bold text-slate-100">Java</strong>, paired with practical experience in building full-stack applications using <strong class="font-bold text-slate-100">React.js</strong>, <strong class="font-bold text-slate-100">FastAPI</strong>, and <strong class="font-bold text-slate-100">REST APIs</strong>. 
+            </p>
+            <p>
+                Beyond full-stack web development, I focus on core computer science concepts—particularly <strong class="font-bold text-slate-100">Data Structures & Algorithms (DSA)</strong>, <strong class="font-bold text-slate-100">Graph Theory</strong>, and <strong class="font-bold text-slate-100">AI/ML Fundamentals</strong>. Whether optimizing algorithmic complexity or building real-time interactive tools, I enjoy turning complex technical problems into efficient production code.
+            </p>
+        </div>
+        
+        <!-- Education Card & Location Card-->
+        <div class="bg-[#30333E] p-6 rounded-xl border border-[#3E4150] space-y-2 shadow-md">
+            <h3 class="text-lg font-bold text-slate-200">Education</h3>
+            <p class="text-sm font-semibold text-teal-400">Bachelor of Engineering (B.E.)</p>
+            <p class="text-xs font-bold text-slate-100">Jadavpur University,2028</p>
+            <p class="text-xs font-bold text-slate-100">CGPA : 7.8</p>
+            <h3 class="text-lg font-bold text-slate-200">Location</h3>
+             <p class="text-sm font-semibold text-teal-400">Kolkata,India</p>
+
+        </div>
+
+    </div>
+</section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="space-y-8 scroll-mt-20">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-100 flex items-center gap-3">
+                <span class="text-teal-400 font-mono">02.</span> <strong class="font-bold">Technical Expertise</strong>
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card Container Shade: #30333E -->
+                <div class="bg-[#30333E]/70 border border-[#3E4150] p-6 rounded-xl space-y-4 hover:border-teal-500/50 hover:-translate-y-1 transition-all duration-300 shadow-lg group">
+                    <h3 class="text-teal-400 font-bold text-base flex items-center gap-2">
+                        <i class="fa-solid fa-code text-teal-400"></i> <strong class="font-bold">Languages</strong>
+                    </h3>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="devicon-cplusplus-plain colored text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">C++</strong> (STL, OOP)</span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="devicon-python-plain colored text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">Python</strong> (Data & Backend)</span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="devicon-java-plain colored text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">Java</strong> (Core OOP)</span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="devicon-javascript-plain colored text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">JavaScript</strong> (ES6+)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#30333E]/70 border border-[#3E4150] p-6 rounded-xl space-y-4 hover:border-teal-500/50 hover:-translate-y-1 transition-all duration-300 shadow-lg group">
+                    <h3 class="text-teal-400 font-bold text-base flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-teal-400"></i> <strong class="font-bold">Web & Frameworks</strong>
+                    </h3>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="devicon-react-original colored text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">React.js</strong> (Frontend)</span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="devicon-tailwindcss-plain colored text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">Tailwind CSS</strong> & <strong>HTML5</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="devicon-fastapi-plain colored text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">FastAPI</strong> & <strong>Node.js</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="fa-solid fa-plug text-teal-400 text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">REST APIs</strong> & <strong>WebSockets</strong></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#30333E]/70 border border-[#3E4150] p-6 rounded-xl space-y-4 hover:border-teal-500/50 hover:-translate-y-1 transition-all duration-300 shadow-lg group">
+                    <h3 class="text-teal-400 font-bold text-base flex items-center gap-2">
+                        <i class="fa-solid fa-screwdriver-wrench text-teal-400"></i> <strong class="font-bold">Tools & DB</strong>
+                    </h3>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="devicon-git-plain colored text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">Git</strong> & <strong>GitHub</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="devicon-mysql-plain colored text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">SQL</strong> & <strong>Databases</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="devicon-linux-plain colored text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">Linux CLI</strong> & <strong>Bash</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="devicon-docker-plain colored text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">Docker</strong> Sandboxing</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#30333E]/70 border border-[#3E4150] p-6 rounded-xl space-y-4 hover:border-teal-500/50 hover:-translate-y-1 transition-all duration-300 shadow-lg group">
+                    <h3 class="text-teal-400 font-bold text-base flex items-center gap-2">
+                        <i class="fa-solid fa-brain text-teal-400"></i> <strong class="font-bold">Core Concepts</strong>
+                    </h3>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="fa-solid fa-diagram-project text-teal-400 text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">Data Structures (DSA)</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="fa-solid fa-network-wired text-teal-400 text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">Graph Theory & Algorithms</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="fa-solid fa-microchip text-teal-400 text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">Object-Oriented Programming</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-200">
+                            <i class="fa-solid fa-robot text-teal-400 text-xl"></i>
+                            <span><strong class="font-bold text-slate-100">AI/ML Fundamentals</strong></span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="space-y-8 scroll-mt-20">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-100 flex items-center gap-3">
+                <span class="text-teal-400 font-mono">03.</span> <strong class="font-bold">Featured Projects</strong>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <article class="bg-[#30333E]/70 border border-[#3E4150] rounded-xl p-6 flex flex-col justify-between hover:border-teal-500/50 transition-all duration-300">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-mono text-teal-400">Full-stack </span>
+                            <div class="flex gap-4 text-slate-400 text-lg">
+                                <a href="https://github.com/debrajd163-tech/ALGO-VISUALIZER" target="_blank" class="hover:text-teal-400 transition" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://algo-visualizer-yhm4.vercel.app/" target="_blank" class="hover:text-teal-400 transition" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-100">ALGO-VISUALIZER</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            A full-stack algorithm visualizer where the backend executes sorting, searching, and pathfinding algorithms, records their step-by-step execution as frames, and the frontend consumes those frames through REST APIs to animate the algorithm.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-6">
+                        <span class="text-xs font-mono px-2 py-1 bg-[#23252D] text-slate-300 rounded border border-[#3E4150]/50">Node.js</span>
+                        <span class="text-xs font-mono px-2 py-1 bg-[#23252D] text-slate-300 rounded border border-[#3E4150]/50">Express</span>
+                        <span class="text-xs font-mono px-2 py-1 bg-[#23252D] text-slate-300 rounded border border-[#3E4150]/50">Javascript Vanilla</span>
+                    </div>
+                </article>
+
+                <article class="bg-[#30333E]/70 border border-[#3E4150] rounded-xl p-6 flex flex-col justify-between hover:border-teal-500/50 transition-all duration-300">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-mono text-teal-400">AI / Document Intelligence</span>
+                            <div class="flex gap-4 text-slate-400 text-lg">
+                                <a href="https://github.com" target="_blank" class="hover:text-teal-400 transition" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-100">RAG Document Q&A Engine</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            A Retrieval-Augmented Generation pipeline using LangChain, HuggingFace embeddings, and FAISS vector search to extract precise context from uploaded files.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-6">
+                        <span class="text-xs font-mono px-2 py-1 bg-[#23252D] text-slate-300 rounded border border-[#3E4150]/50">Python</span>
+                        <span class="text-xs font-mono px-2 py-1 bg-[#23252D] text-slate-300 rounded border border-[#3E4150]/50">LangChain</span>
+                        <span class="text-xs font-mono px-2 py-1 bg-[#23252D] text-slate-300 rounded border border-[#3E4150]/50">FAISS</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <!-- Contact Section with Dynamic Hover Email Button -->
+<section id="contact" class="max-w-xl mx-auto text-center space-y-6 scroll-mt-20 py-12 bg-[#23252D]/40 p-8 rounded-2xl border border-[#3E4150]/40">
+    <h2 class="text-3xl font-bold text-slate-100">Get In Touch</h2>
+    <p class="text-slate-300 leading-relaxed text-sm">
+        I am actively seeking internship opportunities. Whether you have a position open, a project idea, or just want to connect, feel free to reach out!
+    </p>
+
+    <!-- Dynamic Hover Slide Button -->
+    <div class="pt-2">
+        <a href="mailto:debrajd163@gmail.com" class="group relative inline-flex items-center justify-center overflow-hidden px-8 py-4 bg-teal-500 text-[#272932] font-bold rounded-lg transition-all duration-300 hover:bg-teal-400 shadow-lg shadow-teal-500/20 w-64 h-14">
+            
+            <!-- Default Visible Text ("Say Hello") -->
+            <span class="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                Say Hello <i class="fa-solid fa-paper-plane ml-2 text-sm"></i>
+            </span>
+
+            <!-- Hover Revealed Text (Your Email Address) -->
+            <span class="absolute inset-0 flex items-center justify-center translate-y-full opacity-0 transition-all duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 text-xs sm:text-sm font-mono tracking-tight">
+                debrajd163@gmail.com
+            </span>
+
+        </a>
+    </div>
+    
+    <!-- Social Icons -->
+    <div class="flex justify-center space-x-6 text-xl text-slate-400 pt-4">
+        <a href="https://github.com/debrajd163-tech" target="_blank" class="hover:text-teal-400 transition" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/debraj-das-a7aa6b314/" target="_blank" class="hover:text-teal-400 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:debrajd163@gmail.com" class="hover:text-teal-400 transition" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#3E4150] py-6 text-center text-xs text-slate-400 bg-[#23252D]/80">
+        <p>Designed & Built by Debraj &copy; 2026. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
